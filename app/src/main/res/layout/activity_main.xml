@@ -7,175 +7,164 @@
     tools:context=".MainActivity"
     android:padding="20dp"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-
-
 
     >
 
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <View android:id="@+id/strut"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_centerHorizontal="true"/>
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@id/strut"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/gmail"
-            android:background="#df4a32"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:layout_marginRight="8sp"
-
-
-            />
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/strut"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/facebook"
-            android:background="#3a5799"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:layout_marginLeft="8sp"
-
-            />
-
-
-
-
-
-
-    </RelativeLayout>
-
-
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <View android:id="@+id/FLname"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_centerHorizontal="true"/>
-
-
-
-
-        <EditText
-            android:id="@+id/editFname"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="First Name"
-            android:layout_alignRight="@+id/FLname"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="8sp"
-
-
-
-            />
-
-
-
-        <EditText
-            android:id="@+id/editLname"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Last Name"
-            android:layout_alignLeft="@id/FLname"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="8sp"
-
-
-            />
-
-    </RelativeLayout>
-
-
-
-
-
-    <EditText
-        android:id="@+id/editEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="EMAIL"
-        android:layout_marginTop="20dp"
-
-        />
-
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical">
-
-
-
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/ccp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:ccp_defaultNameCode="US"
-
-            />
-
-        <EditText
-            android:id="@+id/editText_carrierNumber"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:inputType="phone"
-            android:hint="MOBILE"
-            android:singleLine="true" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            >
 
 
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/google"
+                android:background="#d80027"
+                android:layout_margin="10dp"
+                android:padding="13dp"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/facebook"
+                android:background="#3b5a9a"
+                android:layout_margin="10dp"
+                android:padding="13dp"/>
 
 
-    
+        </LinearLayout>
 
-
-
-    <EditText
-        android:id="@+id/editPassword"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="Password"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="20dp">
 
-        />
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:textColor="#555555"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#555555"
+            android:layout_toLeftOf="@+id/or"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#555555"
+            android:layout_toRightOf="@+id/or"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            >
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:padding="13dp"
+                android:hint="First Name"
+
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:padding="13dp"
+                android:hint="Last Name"/>
+
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="EMAIL"
+                android:layout_margin="10dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
 
 
 
-    <Button
-        android:id="@+id/angry_btn"
-        android:text="NEXT"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_defaultNameCode="US"
+                android:hint="MOBILE"
 
-        />
+                />
+
+            <EditText
+                android:id="@+id/editText_carrierNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:inputType="phone"
+                android:layout_margin="10dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:layout_margin="10dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:text="NEXT"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:layout_margin="10dp"
+
+            />
 
 
 
